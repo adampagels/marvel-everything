@@ -2,13 +2,12 @@
 //  marvel_everythingUITests.swift
 //  marvel-everythingUITests
 //
-//  Created by Adam Pagels on 2024-03-06.
+//  Created by Adam Pagels on 2024-03-07.
 //
 
 import XCTest
 
-final class marvel_everythingUITests: XCTestCase {
-
+final class UITests: XCTestCase {
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
 

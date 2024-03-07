@@ -2,12 +2,12 @@
 //  marvel_everythingUITestsLaunchTests.swift
 //  marvel-everythingUITests
 //
-//  Created by Adam Pagels on 2024-03-06.
+//  Created by Adam Pagels on 2024-03-07.
 //
 
 import XCTest
 
-final class marvel_everythingUITestsLaunchTests: XCTestCase {
+final class UITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
