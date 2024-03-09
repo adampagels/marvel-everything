@@ -15,3 +15,6 @@ xcuserdata/
 # Swift Package Manager
 /Packages/
 .package-cache/
+
+# Security
+marvel-everything/Credentials.swift
