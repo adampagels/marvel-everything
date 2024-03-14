@@ -55,6 +55,7 @@
 		7ECBB0192B98EBF400383CB1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7ECBB01B2B98EBF600383CB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7ECBB01E2B98EBF600383CB1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7ED167832BA38C4000FBD0BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		7EF4A3612B9A7B16006B63AC /* CharacterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewModel.swift; sourceTree = "<group>"; };
 		7EFAF5C12B9A66C100836AE8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		7EFAF5F42B9A68C100836AE8 /* marvel-everythingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "marvel-everythingTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,6 +113,7 @@
 		7ECBB0162B98EBF400383CB1 /* marvel-everything */ = {
 			isa = PBXGroup;
 			children = (
+				7ED167832BA38C4000FBD0BC /* Info.plist */,
 				7EF4A3602B9A7B00006B63AC /* Model */,
 				7EF4A35F2B9A7AF9006B63AC /* ViewModel */,
 				7EFAF5C02B9A66A500836AE8 /* View */,
@@ -485,6 +487,7 @@
 				DEVELOPMENT_TEAM = ZQ8H3V4RX7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "marvel-everything/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -514,6 +517,7 @@
 				DEVELOPMENT_TEAM = ZQ8H3V4RX7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "marvel-everything/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
