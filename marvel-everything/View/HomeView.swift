@@ -17,17 +17,22 @@ struct HomeView: View {
     ]
 
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-        ScrollView {
-            LazyVGrid(columns: columns, spacing: 10) {
-                ForEach(vm.characters) { character in
-                    CharacterView(character: character)
-                }
-            }.padding(20)
-        }.task {
-            do {
-                try await vm.fetchCharacters()
-            } catch {}
+        NavigationStack {
+            ScrollView {
+                LazyVGrid(columns: columns, spacing: 10) {
+                    ForEach(vm.characters) { character in
+                        NavigationLink {
+                            CharacterDetailView(character: character)
+                        } label: {
+                            CharacterView(character: character)
+                        }
+                    }
+                }.padding(20)
+            }.task {
+                do {
+                    try await vm.fetchCharacters()
+                } catch {}
+            }
         }
     }
 }
