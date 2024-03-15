@@ -21,41 +21,7 @@ struct HomeView: View {
         ScrollView {
             LazyVGrid(columns: columns, spacing: 10) {
                 ForEach(vm.characters) { character in
-                    VStack {
-                        AsyncImage(url: URL(string: character.thumbnail["path"]! + "." + character
-                                       .thumbnail["extension"]!),
-                        scale: scale * size) { phase in
-                            switch phase {
-                            case .empty:
-                                ZStack {
-                                    Color.gray
-                                    ProgressView()
-                                }
-                            case let .success(image):
-                                image.resizable()
-
-                            case let .failure(error):
-                                Text(error.localizedDescription)
-
-                            @unknown default:
-                                EmptyView()
-                            }
-                        }
-                        .frame(width: size, height: size)
-                        HStack {
-                            Text(character.name)
-                                .lineLimit(1)
-                                .truncationMode(.tail)
-
-                            Spacer()
-                        }
-                        .padding([.bottom, .leading], 5)
-                    }
-                    .cornerRadius(20)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 20)
-                            .stroke(.gray, lineWidth: 1)
-                    )
+                    CharacterView(character: character)
                 }
             }.padding(20)
         }.task {
