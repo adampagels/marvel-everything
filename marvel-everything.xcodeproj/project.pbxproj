@@ -13,6 +13,12 @@
 		7E7C15052B9B77B600A2CE68 /* CharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7C15042B9B77B600A2CE68 /* CharacterView.swift */; };
 		7E7C15062B9B77B600A2CE68 /* CharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7C15042B9B77B600A2CE68 /* CharacterView.swift */; };
 		7E7C15072B9B77B600A2CE68 /* CharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7C15042B9B77B600A2CE68 /* CharacterView.swift */; };
+		7E8716832BA5C18B00C7CAE0 /* CharacterDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8716822BA5C18B00C7CAE0 /* CharacterDetailViewModel.swift */; };
+		7E8716842BA5C18B00C7CAE0 /* CharacterDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8716822BA5C18B00C7CAE0 /* CharacterDetailViewModel.swift */; };
+		7E8716852BA5C18B00C7CAE0 /* CharacterDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8716822BA5C18B00C7CAE0 /* CharacterDetailViewModel.swift */; };
+		7E8716872BA5C1C100C7CAE0 /* CharacterDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8716862BA5C1C100C7CAE0 /* CharacterDetailModel.swift */; };
+		7E8716882BA5C1C100C7CAE0 /* CharacterDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8716862BA5C1C100C7CAE0 /* CharacterDetailModel.swift */; };
+		7E8716892BA5C1C100C7CAE0 /* CharacterDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8716862BA5C1C100C7CAE0 /* CharacterDetailModel.swift */; };
 		7EBD14272B9D229D005507F6 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBD14262B9D229D005507F6 /* Credentials.swift */; };
 		7EBD14282B9D229D005507F6 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBD14262B9D229D005507F6 /* Credentials.swift */; };
 		7EBD14292B9D229D005507F6 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBD14262B9D229D005507F6 /* Credentials.swift */; };
@@ -52,6 +58,8 @@
 /* Begin PBXFileReference section */
 		7E3347C22BA47C6800F82B9A /* CharacterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailView.swift; sourceTree = "<group>"; };
 		7E7C15042B9B77B600A2CE68 /* CharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterView.swift; sourceTree = "<group>"; };
+		7E8716822BA5C18B00C7CAE0 /* CharacterDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewModel.swift; sourceTree = "<group>"; };
+		7E8716862BA5C1C100C7CAE0 /* CharacterDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailModel.swift; sourceTree = "<group>"; };
 		7EBD14262B9D229D005507F6 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		7EBD142A2B9D250B005507F6 /* CharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
 		7ECBB0142B98EBF400383CB1 /* marvel-everything.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "marvel-everything.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -142,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				7EF4A3612B9A7B16006B63AC /* CharacterViewModel.swift */,
+				7E8716822BA5C18B00C7CAE0 /* CharacterDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -150,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				7EBD142A2B9D250B005507F6 /* CharacterModel.swift */,
+				7E8716862BA5C1C100C7CAE0 /* CharacterDetailModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -312,12 +322,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E7C15052B9B77B600A2CE68 /* CharacterView.swift in Sources */,
+				7E8716872BA5C1C100C7CAE0 /* CharacterDetailModel.swift in Sources */,
 				7EFAF5C22B9A66C100836AE8 /* HomeView.swift in Sources */,
 				7ECBB01A2B98EBF400383CB1 /* ContentView.swift in Sources */,
 				7EBD14272B9D229D005507F6 /* Credentials.swift in Sources */,
 				7ECBB0182B98EBF400383CB1 /* marvel_everythingApp.swift in Sources */,
 				7EBD142B2B9D250B005507F6 /* CharacterModel.swift in Sources */,
 				7EF4A3622B9A7B16006B63AC /* CharacterViewModel.swift in Sources */,
+				7E8716832BA5C18B00C7CAE0 /* CharacterDetailViewModel.swift in Sources */,
 				7E3347C32BA47C6800F82B9A /* CharacterDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,7 +343,9 @@
 				7EBD14282B9D229D005507F6 /* Credentials.swift in Sources */,
 				7E3347C42BA47C6800F82B9A /* CharacterDetailView.swift in Sources */,
 				7E7C15062B9B77B600A2CE68 /* CharacterView.swift in Sources */,
+				7E8716882BA5C1C100C7CAE0 /* CharacterDetailModel.swift in Sources */,
 				7EF4A3632B9A7B16006B63AC /* CharacterViewModel.swift in Sources */,
+				7E8716842BA5C18B00C7CAE0 /* CharacterDetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,8 +357,10 @@
 				7EFAF6062B9A68D800836AE8 /* UITestsLaunchTests.swift in Sources */,
 				7EF4A3642B9A7B16006B63AC /* CharacterViewModel.swift in Sources */,
 				7E3347C52BA47C6800F82B9A /* CharacterDetailView.swift in Sources */,
+				7E8716852BA5C18B00C7CAE0 /* CharacterDetailViewModel.swift in Sources */,
 				7EBD142D2B9D250B005507F6 /* CharacterModel.swift in Sources */,
 				7E7C15072B9B77B600A2CE68 /* CharacterView.swift in Sources */,
+				7E8716892BA5C1C100C7CAE0 /* CharacterDetailModel.swift in Sources */,
 				7EFAF6042B9A68D800836AE8 /* UITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,9 +8,80 @@
 import SwiftUI
 
 struct CharacterDetailView: View {
+    @StateObject private var vm = CharacterDetailViewModel()
+
     let character: Character
+
+    let size: CGFloat = 180
+    @Environment(\.displayScale) var scale
+
     var body: some View {
-        Text(character.name)
+        ScrollView {
+            AsyncImage(url: URL(string: character.thumbnail["path"]! + "." + character
+                    .thumbnail["extension"]!))
+            { phase in
+                switch phase {
+                case .empty:
+                    ZStack {
+                        Color.gray
+                        ProgressView()
+                    }
+                case let .success(image):
+
+                    image.resizable()
+
+                case let .failure(error):
+                    Text(error.localizedDescription)
+
+                @unknown default:
+                    EmptyView()
+                }
+            }
+            .frame(width: .infinity, height: scale * size / 1.8)
+            VStack(alignment: .leading) {
+                Text(character.name).font(.title)
+                Text(character.description)
+
+                Text("Comics").font(.title)
+
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 15) {
+                        ForEach(vm.comics) { comic in
+                            NavigationLink {
+//                                HomeView()
+                            } label: {
+                                AsyncImage(
+                                    url: URL(string: comic.thumbnail["path"]! + "." + comic
+                                        .thumbnail["extension"]!),
+                                    scale: scale * size
+                                ) { phase in
+                                    switch phase {
+                                    case .empty:
+                                        ZStack {
+                                            Color.gray
+                                            ProgressView()
+                                        }
+                                    case let .success(image):
+
+                                        image.resizable()
+
+                                    case let .failure(error):
+                                        Text(error.localizedDescription)
+
+                                    @unknown default:
+                                        EmptyView()
+                                    }
+                                }.frame(width: size * 1.6, height: size * 2)
+                            }
+                        }
+                    }
+                }
+            }
+        }.task {
+            do {
+                try await vm.fetchComicsByCharacter(characterID: character.id)
+            } catch {}
+        }
     }
 }
 
