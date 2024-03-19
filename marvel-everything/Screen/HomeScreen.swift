@@ -1,5 +1,5 @@
 //
-//  HomeView.swift
+//  HomeScreen.swift
 //  marvel-everything
 //
 //  Created by Adam Pagels on 2024-03-07.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct HomeView: View {
-    @StateObject private var vm = CharacterViewModel()
+struct HomeScreen: View {
+    @StateObject private var vm = HomeViewModel()
     @Environment(\.displayScale) var scale
     let size: CGFloat = 180
 
@@ -22,7 +22,7 @@ struct HomeView: View {
                 LazyVGrid(columns: columns, spacing: 10) {
                     ForEach(vm.characters) { character in
                         NavigationLink {
-                            CharacterDetailView(character: character)
+                            CharacterDetailScreen(character: character)
                         } label: {
                             CharacterView(character: character)
                         }
@@ -38,5 +38,5 @@ struct HomeView: View {
 }
 
 #Preview {
-    HomeView()
+    HomeScreen()
 }

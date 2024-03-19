@@ -8,7 +8,7 @@
 import CryptoKit
 import Foundation
 
-final class CharacterViewModel: ObservableObject {
+final class HomeViewModel: ObservableObject {
     @Published var characters: [Character] = []
 
     func fetchCharacters() async throws {

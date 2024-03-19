@@ -1,5 +1,5 @@
 //
-//  CharacterModel.swift
+//  HomeModel.swift
 //  marvel-everything
 //
 //  Created by Adam Pagels on 2024-03-09.

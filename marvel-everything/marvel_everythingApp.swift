@@ -11,7 +11,7 @@ import SwiftUI
 struct marvel_everythingApp: App {
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            HomeScreen()
         }
     }
 }

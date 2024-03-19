@@ -1,5 +1,5 @@
 //
-//  CharacterDetailView.swift
+//  CharacterDetailScreen.swift
 //  marvel-everything
 //
 //  Created by Adam Pagels on 2024-03-15.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CharacterDetailView: View {
+struct CharacterDetailScreen: View {
     @StateObject private var vm = CharacterDetailViewModel()
 
     let character: Character
@@ -86,7 +86,7 @@ struct CharacterDetailView: View {
 }
 
 #Preview {
-    CharacterDetailView(character: Character(
+    CharacterDetailScreen(character: Character(
         id: 1_017_100,
         name: "A-Bomb (HAS)",
         description: "Rick Jones has been Hulk's best bud since day one, but now he's more than a friend...he's a teammate! Transformed by a Gamma energy explosion, A-Bomb's thick, armored skin is just as strong and powerful as it is blue. And when he curls into action, he uses it like a giant bowling ball of destruction!",
