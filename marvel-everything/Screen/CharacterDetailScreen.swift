@@ -50,28 +50,7 @@ struct CharacterDetailScreen: View {
                             NavigationLink {
 //                                HomeView()
                             } label: {
-                                AsyncImage(
-                                    url: URL(string: comic.thumbnail["path"]! + "." + comic
-                                        .thumbnail["extension"]!),
-                                    scale: scale * size
-                                ) { phase in
-                                    switch phase {
-                                    case .empty:
-                                        ZStack {
-                                            Color.gray
-                                            ProgressView()
-                                        }
-                                    case let .success(image):
-
-                                        image.resizable()
-
-                                    case let .failure(error):
-                                        Text(error.localizedDescription)
-
-                                    @unknown default:
-                                        EmptyView()
-                                    }
-                                }.frame(width: size * 1.6, height: size * 2)
+                                ComicView(comic: comic)
                             }
                         }
                     }
